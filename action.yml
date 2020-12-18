@@ -1,0 +1,21 @@
+name: AWS STS Assume Role
+description: Assumes role and set the credentials to environment variable.
+inputs:
+  access-key-id:
+    required: true
+  secret-access-key:
+    required: true
+  role-arn:
+    required: true
+  external-id:
+    required: true
+  duration-seconds:
+    required: false
+    default: 900
+  session-name:
+    required: false
+    default: GitHubAction
+
+runs:
+  using: node12
+  main: index.js
