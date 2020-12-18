@@ -3,7 +3,6 @@ const core = require('@actions/core');
 
 const assumeRole = async () => {
   try {
-    console.log("Start Assume Role")
     const accessKeyId = core.getInput('access-key-id');
     const secretAccessKey = core.getInput('secret-access-key');
     const roleArn = core.getInput('role-arn');
